@@ -1,6 +1,8 @@
 function ShoppingCtrl($scope) {
     $scope.scan = function() {
-        cordova.plugins.barcodeScanner.scan(function(data) {
+        alert("Yeah...")
+        var scanner = cordova.require("cordova/plugin/BarcodeScanner");        
+        scanner.scan(function(data) {
             $scope.rawData = data.text + "(" + data.format + ")";
         }, function fail(error) {
             alert(error);

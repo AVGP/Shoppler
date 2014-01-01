@@ -1,9 +1,11 @@
 function ShoppingCtrl($scope) {
     $scope.scan = function() {
         alert("Yeah...")
-        var scanner = cordova.require("cordova/plugin/BarcodeScanner");        
+        var scanner = cordova.require("cordova/plugin/BarcodeScanner");
         scanner.scan(function(data) {
-            $scope.rawData = data.text + "(" + data.format + ")";
+            $scope.$apply(function() {
+                $scope.rawData = data.text + "(" + data.format + ")";
+            });
         }, function fail(error) {
             alert(error);
         });
@@ -11,5 +13,5 @@ function ShoppingCtrl($scope) {
 }
 
 function ListCtrl($scope) {
-    
+
 }

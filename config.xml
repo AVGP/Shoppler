@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "de.geekonaut.shoppler"
+        versionCode = "10" 
+        version     = "0.0.1" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Shoppler</name>
+
+    <description>
+        A shopping assistant. 
+    </description>
+
+    <author href="https://avgp.github.io">
+        Martin Naumann
+    </author>
+
+    <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+
+</widget>
